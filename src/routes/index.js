@@ -36,7 +36,7 @@ router.post('/event', async(req, res) => {
     await axios.post(`${apiServer}/api/event`, req.body);
     res.redirect('/');
   } catch (e) {
-    console.log('Post /event Error: ', e.message);
+    console.log('Post /events Error: ', e.message);
     renderError(res, e);
   }
 });
